@@ -1,0 +1,40 @@
+<tabset justified="true">
+	<tab heading="BASIC PROPERTIES">
+		<table class="table table-hover">
+            <tr>
+	            <th>Parameter</th>
+	            <th>Value</th> 
+            </tr>
+            <tr ng-repeat="item in prof.val.basic_properties">
+                <td><div ng-bind-html="item.parameter.html"></div></td>
+                <td><div ng-bind-html="item.value"></div><div ng-bind-html="item.units.html"></div></td>
+            </tr>
+        </table>
+	</tab>
+	<tab heading="GROSS PROPERTIES">
+		<table class="table table-hover">
+            <tr>
+	            <th>Parameter</th>
+	            <th>Value</th> 
+            </tr>
+            <tr ng-repeat="item in prof.val.gross_properties">
+                <td><div ng-bind-html="item.parameter.html"></div></td>
+            	<td><div ng-bind-html="item.value"></div><div ng-bind-html="item.units.html"></div></td>
+            </tr>
+        </table>
+	</tab>
+	<tab heading="CLASSIFICATIONS">
+	<!--
+		<table class="table table-striped table-hover">
+            <tr>
+	            <th>Parameter</th>
+	            <th>Value</th> 
+            </tr>
+            <tr ng-repeat="item in profile.classifications">
+            	<td>{{item.parameter.html}}</td>
+            	<td>{{item.value}} {{item.units.html}}</td>
+            </tr>
+        </table>
+        -->
+	</tab>
+</tabset>
