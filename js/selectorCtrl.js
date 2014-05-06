@@ -5,16 +5,10 @@ app.controller("selector", function ($scope, $rootScope, allProfilesSrvc) {
 
 	$scope.type = "HE";
 	$rootScope.profile = "HE100AA";
-	$scope.steel = "S 235"
+	$rootScope.steel = "S 235"
 
 	$scope.selectedType = $scope.allprofiles.Profiles.HE;
 
-/*
-	$scope.updateProfile = function(profile) {
-		$rootScope.profile = profile;
-		$rootScope.updateContent(profile)
-	};
-*/
 	$scope.updateType = function(type) {
 		if (type == "HE"){
 			$rootScope.profile = "HE100AA";
@@ -36,6 +30,7 @@ app.controller("selector", function ($scope, $rootScope, allProfilesSrvc) {
 			$rootScope.profile = "W1100X499";
 			$scope.selectedType = $scope.allprofiles.Profiles.W;	
 		}
+		$rootScope.updateContent($rootScope.profile, $rootScope.steel);
 	};
 
 });

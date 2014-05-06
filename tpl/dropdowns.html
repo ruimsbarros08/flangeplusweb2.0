@@ -1,19 +1,51 @@
 <div id="selector" class="panel panel-default">
+<legend>Select Profile</legend>
+<form class="form-vertical">
+	<fieldset>
+		<div class="form-group">
+			    <label for="steel">Steel</label>
+		        <select class="form-control" ng-options="item for item in allprofiles.SteelGrades" ng-model="steel" id="steel" ng-change="updateSteel(steel)"></select>
+		    </div>
+	</fieldset>
+</form>
+<accordion>
+	<accordion-group heading="Commercial Profiles" is-open="true">
 	<form class="form-vertical">
 		<fieldset>
-		    <legend>Select Profile</legend>
 		    <div class="form-group">
 			    <label for="type">Type</label>
 		        <select class="form-control" ng-options="item for item in allprofiles.SectionTypes" ng-model="type" id="type" ng-change="updateType(type)"></select>
 		    </div>
 		    <div class="form-group">
 			    <label for="profile">Profile</label>
-		        <select class="form-control" ng-options="item.url as item.name for item in selectedType" ng-model="profile" id="profile" ng-change="updateContent(profile)"></select>
-		    </div>
-		    <div class="form-group">
-			    <label for="steel">Steel</label>
-		        <select class="form-control" ng-options="item for item in allprofiles.SteelGrades" ng-model="steel" id="steel"></select>
+		        <select class="form-control" ng-options="item.url as item.name for item in selectedType" ng-model="profile" id="profile" ng-change="updateContent(profile, steel)"></select>
 		    </div>
 		</fieldset>
 	</form>
+	</accordion-group>
+	<accordion-group heading="Builtup Profiles">
+		<form class="form-vertical">
+		<fieldset>
+		    <div class="form-group" >
+			    <label for="b">b</label>
+		        <input class="form-control" ng-model="b" id="b" autocomplete="on"></input>
+		    </div>
+		    <div class="form-group">
+			    <label for="d">d</label>
+		        <input class="form-control" ng-model="d" id="d" autocomplete="on"></input>
+		    </div>
+		    <div class="form-group">
+			    <label for="tw">tw</label>
+		        <input class="form-control" ng-model="tw" id="tw" autocomplete="on"></input>
+		    </div>
+		    <div class="form-group">
+			    <label for="tf">tf</label>
+		        <input class="form-control" ng-model="tf" id="tf" autocomplete="on"></input>
+		    </div>
+		    <button class="btn btn-primary" ng-click="updateContentBuiltup(b, d , tw, tf, steel)" style="width:100%;">Calculate</button>
+		    
+		</fieldset>
+	</form>
+	</accordion-group>
+</accordion>
 </div>
