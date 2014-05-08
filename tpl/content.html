@@ -1,30 +1,47 @@
 <tabset justified="true">
 	<tab heading="BASIC PROPERTIES">
-		<table class="table table-hover" style="width:300px;">
-            <tr>
-	            <th>Parameter</th>
-	            <th>Value</th> 
-            </tr>
-            <tr ng-repeat="item in prof.val.basic_properties">
-                <td><div popover="{{item.description}}" popover-trigger="mouseenter" ng-bind-html="item.parameter.html"></div></td>
-                <td><div style="display:inline-block;" ng-bind-html="item.value"></div>&nbsp;<div style="display:inline-block;" ng-bind-html="item.units.html"></div></td>
-            </tr>
-        </table>
+        <div class="row" style="height:30px;"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value</th> 
+                    </tr>
+                    <tr ng-repeat="item in prof.val.basic_properties" ng-animate="'animate'">
+                        <td><div popover="{{item.description}}" popover-trigger="mouseenter" ng-bind-html="item.parameter.html"></div></td>
+                        <td><div style="display:inline-block;" ng-bind-html="item.value"></div>&nbsp;<div style="display:inline-block;" ng-bind-html="item.units.html"></div></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron"><img src="img/HE.png"></div>
+            </div>
+        </div>
 	</tab>
 	<tab heading="GROSS PROPERTIES">
-		<table class="table table-hover" style="width:300px;">
-            <tr>
-	            <th>Parameter</th>
-	            <th>Value</th> 
-            </tr>
-            <tr ng-repeat="item in prof.val.gross_properties">
-                <td><div popover="{{item.description}}" popover-trigger="mouseenter" ng-bind-html="item.parameter.html"></div></td>
-            	<td><div style="display:inline-block;" ng-bind-html="item.value"></div>&nbsp;<div style="display:inline-block;" ng-bind-html="item.units.html"></div></td>
-            </tr>
-        </table>
+        <div class="row" style="height:30px;"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value</th> 
+                    </tr>
+                    <tr ng-repeat="item in prof.val.gross_properties">
+                        <td><div popover="{{item.description}}" popover-trigger="mouseenter" ng-bind-html="item.parameter.html"></div></td>
+                        <td><div style="display:inline-block;" ng-bind-html="item.value"></div>&nbsp;<div style="display:inline-block;" ng-bind-html="item.units.html"></div></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron"><img src="img/HE.png"></div>
+            </div>
+        </div>
 	</tab>
 	<tab heading="CLASSIFICATIONS">
-        <table class="table table-hover" style="width:300px;">
+        <div class="row" style="height:30px;"></div>
+        <table class="table table-hover" style="width:50%;">
             <caption>Parameters</caption>
             <tr>
                 <th>Parameter</th>
@@ -53,4 +70,31 @@
         </table>
         -->
 	</tab>
+    <tab heading="RESISTANCES">
+        <div class="row" style="height:30px;"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <table class="table table-hover">
+                    <tr>
+                        <th>Parameter</th>
+                        <th>Value</th> 
+                    </tr>
+                    <tr ng-repeat="item in prof.val.resistances">
+                        <td><div popover="{{item.description}}" popover-trigger="mouseenter" ng-bind-html="item.parameter.html"></div></td>
+                        <td><div style="display:inline-block;" ng-bind-html="item.value"></div>&nbsp;<div style="display:inline-block;" ng-bind-html="item.units.html"></div></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <div class="jumbotron"><img src="img/HE.png"></div>
+            </div>
+        </div>
+    </tab>
+    <tab heading="INTERACTION CURVES">
+        <div class="row" style="height:30px;"></div>
+        <highchart id="ycurve" config="highchartsNgConfig"></highchart>
+    </tab>
+    <tab heading="DESIGN CHECK">
+        <div class="row" style="height:30px;"></div>
+    </tab>
 </tabset>
