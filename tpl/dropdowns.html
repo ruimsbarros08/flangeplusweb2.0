@@ -25,23 +25,40 @@
 	</accordion-group>
 	<accordion-group heading="Builtup Profiles">
 		<form class="form-vertical">
+			<fieldset>
+				<div class="form-group">
+				    <label for="Btype">Type</label>
+			        <select class="form-control" ng-options="item for item in builtupTypes" ng-model="builtupType" id="Btype" ng-change="updateBuiltupType(builtupType)"></select>
+		    	</div>
+			</fieldset>
+		</form>
+		<form class="form-vertical" ng-show="Ishape">
 		<fieldset>
 		    <div class="form-group" >
-			    <label for="b">b</label>
-		        <input class="form-control" ng-model="b" id="b" autocomplete="on"></input>
+		    	<div class="row">
+			    	<div class="col-md-6">
+					    <label for="b">b</label>
+				        <input class="form-control" ng-model="b" id="b" autocomplete="on"></input>
+			    	</div>
+			    	<div class="col-md-6">
+					    <label for="d">d</label>
+				        <input class="form-control" ng-model="d" id="d" autocomplete="on"></input>
+			    	</div>
+		    	</div>
+
+		    	<div class="row">
+			    	<div class="col-md-6">
+					    <label for="tw">tw</label>
+				        <input class="form-control" ng-model="tw" id="tw" autocomplete="on"></input>
+			    	</div>
+			    	<div class="col-md-6">
+					   	<label for="tf">tf</label>
+		        		<input class="form-control" ng-model="tf" id="tf" autocomplete="on"></input>
+			    	</div>
+		    	</div>
+
 		    </div>
-		    <div class="form-group">
-			    <label for="d">d</label>
-		        <input class="form-control" ng-model="d" id="d" autocomplete="on"></input>
-		    </div>
-		    <div class="form-group">
-			    <label for="tw">tw</label>
-		        <input class="form-control" ng-model="tw" id="tw" autocomplete="on"></input>
-		    </div>
-		    <div class="form-group">
-			    <label for="tf">tf</label>
-		        <input class="form-control" ng-model="tf" id="tf" autocomplete="on"></input>
-		    </div>
+
 		    <button class="btn btn-primary" ng-click="updateContentBuiltup(b, d , tw, tf, steel)" style="width:100%;">Calculate</button>
 		    
 		</fieldset>
