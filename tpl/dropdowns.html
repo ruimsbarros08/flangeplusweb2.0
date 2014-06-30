@@ -33,36 +33,92 @@
 			</fieldset>
 		</form>
 		<form class="form-vertical" ng-show="Ishape">
-		<fieldset>
-		    <div class="form-group" >
-		    	<div class="row">
-			    	<div class="col-md-6">
-					    <label for="b">b</label>
-				        <input class="form-control" ng-model="b" id="b" autocomplete="on"></input>
+			<fieldset>
+			    <div class="form-group" >
+			    	<div class="row">
+				    	<div class="col-md-6">
+						    <label for="b">b</label>
+					        <input class="form-control" ng-model="b" id="b" autocomplete="on"></input>
+				    	</div>
+				    	<div class="col-md-6">
+						    <label for="d">d</label>
+					        <input class="form-control" ng-model="d" id="d" autocomplete="on"></input>
+				    	</div>
 			    	</div>
-			    	<div class="col-md-6">
-					    <label for="d">d</label>
-				        <input class="form-control" ng-model="d" id="d" autocomplete="on"></input>
-			    	</div>
-		    	</div>
 
-		    	<div class="row">
-			    	<div class="col-md-6">
-					    <label for="tw">tw</label>
-				        <input class="form-control" ng-model="tw" id="tw" autocomplete="on"></input>
+			    	<div class="row">
+				    	<div class="col-md-6">
+						    <label for="tw">tw</label>
+					        <input class="form-control" ng-model="tw" id="tw" autocomplete="on"></input>
+				    	</div>
+				    	<div class="col-md-6">
+						   	<label for="tf">tf</label>
+			        		<input class="form-control" ng-model="tf" id="tf" autocomplete="on"></input>
+				    	</div>
 			    	</div>
-			    	<div class="col-md-6">
-					   	<label for="tf">tf</label>
-		        		<input class="form-control" ng-model="tf" id="tf" autocomplete="on"></input>
+
+			    </div>
+			    
+			</fieldset>
+		</form>
+
+
+		<form class="form-vertical" ng-show="rectangular">
+			<fieldset>
+			    <div class="form-group">
+			    	<div class="row">
+				    	<div class="col-md-12">
+						    <label for="concrete">Concrete</label>
+			        		<input class="form-control" ng-model="concrete" id="concrete" autocomplete="on"></input>
+				    	</div>
 			    	</div>
-		    	</div>
+			    	<div class="row">
+				    	<div class="col-md-6">
+						    <label for="B">B</label>
+					        <input class="form-control" ng-model="B" id="B" autocomplete="on"></input>
+				    	</div>
+				    	<div class="col-md-6">
+						    <label for="H">H</label>
+					        <input class="form-control" ng-model="H" id="H" autocomplete="on"></input>
+				    	</div>
+			    	</div>
+			    	<div class="row">
+			    		<div class="col-md-12">
+						    <label for="t">t</label>
+					        <input class="form-control" ng-model="t" id="t" autocomplete="on"></input>
+				    	</div>
+			    	</div>
+			    </div>   
+			</fieldset>
+		</form>
 
-		    </div>
 
-		    <button class="btn btn-primary" ng-click="updateContentBuiltup(b, d , tw, tf, steel)" style="width:100%;">Calculate</button>
-		    
-		</fieldset>
-	</form>
+		<form class="form-vertical" ng-show="circular">
+			<fieldset>
+			    <div class="form-group">
+			    	<div class="row">
+				    	<div class="col-md-12">
+						    <label for="concrete">Concrete</label>
+			        		<input class="form-control" ng-model="concrete" id="concrete" autocomplete="on"></input>
+				    	</div>
+			    	</div>
+			    	<div class="row">
+				    	<div class="col-md-6">
+						    <label for="D">D</label>
+					        <input class="form-control" ng-model="D" id="D" autocomplete="on"></input>
+				    	</div>
+				    	<div class="col-md-6">
+						    <label for="t">t</label>
+					        <input class="form-control" ng-model="t" id="t" autocomplete="on"></input>
+				    	</div>
+			    	</div>
+			    </div>   
+			</fieldset>
+		</form>
+
+
+		<button class="btn btn-primary" ng-click="updateContentBuiltup(b, d , tw, tf, steel)" style="width:100%;">Calculate</button>
+
 	</accordion-group>
 </accordion>
 </div>

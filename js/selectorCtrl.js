@@ -37,22 +37,22 @@ app.controller("selector", function ($scope, $rootScope, allProfilesSrvc) {
 		$rootScope.updateContent($rootScope.profile, $rootScope.steel);
 	};
 
-	$scope.builtupTypes = ["Ishape", "squared", "circular"]
+	$scope.builtupTypes = ["Ishape", "rectangular", "circular"]
 
 	$scope.updateBuiltupType = function(type) {
 		if (type == "Ishape"){
 			$scope.Ishape = true;
-			$scope.squared = false;
+			$scope.rectangular = false;
 			$scope.circular = false;
 		}
-		else if (type == "squared"){
+		else if (type == "rectangular"){
 			$scope.Ishape = false;
-			$scope.squared = true;
+			$scope.rectangular = true;
 			$scope.circular = false;
 		}
 		else if (type == "circular"){
 			$scope.Ishape = false;
-			$scope.squared = false;
+			$scope.rectangular = false;
 			$scope.circular = true;	
 		}
 
